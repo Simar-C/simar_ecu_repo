@@ -59,7 +59,7 @@ def find_packing_codes(text):
 
 # ---------------- Load SOP DOCX ----------------
 def load_sop_text():
-    sop_path = "/home/ubuntu/jupyter_workspace/test/DGD MSDS/data/DGD AND MSDS CHECKING SOP.docx"
+    sop_path = "DGD AND MSDS CHECKING SOP.docx"
     doc = Document(sop_path)
     return "\n".join([p.text for p in doc.paragraphs])
 
@@ -1421,4 +1421,5 @@ try:
     st.markdown("### 📘 Extracted JSON (Formatted)")
     st.code(pretty_json, language="json")
 except:
+
     st.warning("Could not format JSON.")
